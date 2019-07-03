@@ -47,12 +47,50 @@ const wallets = {
       description: 'Navigate to your Ethereum account. Follow Ledger instructions to connect Ethereum wallet'
     },
     troubleshootConnectionLink: 'https://support.ledger.com/hc/en-us/articles/115005195945'
+  },
+  'etho_node': {
+    icon: node,
+    name: 'Node',
+    connection: {
+      title: 'On your node',
+      description: 'Make sure your Ether1 node is running and available.'
+    },
+    troubleshootConnectionLink: 'https://ethereum.gitbooks.io/frontier-guide/content/getting_a_client.html'
+  },
+  'etho_ledger': {
+    icon: ledger,
+    name: 'Ledger',
+    connection: {
+      title: 'On your ledger',
+      description: 'Navigate to your Ether1 account. Follow Ledger instructions to connect Ether1 wallet'
+    },
+    troubleshootConnectionLink: 'https://support.ledger.com/hc/en-us/articles/115005195945'
+  },
+  'ath_node': {
+    icon: node,
+    name: 'Node',
+    connection: {
+      title: 'On your node',
+      description: 'Make sure your Atheios node is running and available.'
+    },
+    troubleshootConnectionLink: 'https://ethereum.gitbooks.io/frontier-guide/content/getting_a_client.html'
+  },
+  'ath_ledger': {
+    icon: ledger,
+    name: 'Ledger',
+    connection: {
+      title: 'On your ledger',
+      description: 'Navigate to your Atheios account. Follow Ledger instructions to connect Atheios wallet'
+    },
+    troubleshootConnectionLink: 'https://support.ledger.com/hc/en-us/articles/115005195945'
   }
 }
 
 const walletsByAsset = {
+  ath: ['metamask', 'ath_ledger', 'ath_node'],
+  etho: ['metamask', 'etho1_ledger', 'etho1_node'],
   eth: ['metamask', 'ethereum_ledger', 'ethereum_node'],
-  btc: ['bitcoin_ledger', 'bitcoin_node'],
+  btc: ['bitcoin_ledger', 'bitcoin_node', 'metamask'],
   erc20: ['metamask', 'ethereum_ledger', 'ethereum_node']
 }
 

@@ -5,7 +5,9 @@ import config from '../config'
 const networksMap = {
   btc: BitcoinNetworks,
   eth: EthereumNetworks,
-  erc20: EthereumNetworks
+  erc20: EthereumNetworks,
+  etho: EthereumNetworks,
+  ath: EthereumNetworks
 }
 
 function getNetworkByCurrency (asset) {

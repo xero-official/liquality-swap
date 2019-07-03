@@ -75,8 +75,40 @@ function createERC20Client (asset, wallet) {
   return erc20Client
 }
 
+function createEthoClient (asset, wallet) {
+  const ethoConfig = config.assets.etho
+  const ethoClient = new Client()
+  ethoClient.addProvider(new EthereumRpcProvider(
+   ethoConfig.rpc.url
+  ))
+  if (wallet === 'metamask') {
+   ethoClient.addProvider(new EthereumMetaMaskProvider(web3.currentProvider, EthereumNetworks[ethoConfig.network]))
+  } else if (wallet === 'ether1_ledger') {
+  ethoClient.addProvider(new EthereumLedgerProvider({network: EthereumNetworks[ethoConfig.network]}))
+  }
+  ethoClient.addProvider(new EthereumSwapProvider())
+  return ethoClient
+}
+
+function createAthClient (asset, wallet) {
+  const athConfig = config.assets.ath
+  const athClient = new Client()
+  athClient.addProvider(new EthereumRpcProvider(
+   athConfig.rpc.url
+  ))
+  if (wallet === 'metamask') {
+   athClient.addProvider(new EthereumMetaMaskProvider(web3.currentProvider, EthereumNetworks[athConfig.network]))
+  } else if (wallet === 'atheios_ledger') {
+   athClient.addProvider(new EthereumLedgerProvider({network: EthereumNetworks[athConfig.network]}))
+  }
+  athClient.addProvider(new EthereumSwapProvider())
+  return athClient
+}
+
 const clientCreators = {
   btc: createBtcClient,
+  ath: createAthClient,
+  etho: createEthoClient,
   eth: createEthClient,
   erc20: createERC20Client
 }

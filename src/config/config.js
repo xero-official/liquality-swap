@@ -2,26 +2,15 @@ export default {
   assets: {
     eth: {
       rpc: {
-        url: 'http://localhost:8545'
+        url: 'https://rpc.ether1.org/'
       },
-      network: 'rinkeby'
+      network: 'unknown'
     },
-    midman: {
-      type: 'erc20',
+    ath: {
       rpc: {
-        url: 'http://localhost:8545'
+        url: 'https://rpc.fallengravity.xyz/'
       },
-      contractAddress: '0x422950598Eb23877deAfF346dA0550Aa53482156', // Local ERC20 contract (18 decimals),
-      network: 'rinkeby'
-    },
-    btc: {
-      rpc: {
-        username: 'bitcoin',
-        password: 'local321',
-        url: 'http://localhost:18332'
-      },
-      network: 'bitcoin_testnet',
-      feeNumberOfBlocks: 2
+      network: 'unknown'
     }
   },
   debug: true,
