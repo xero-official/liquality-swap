@@ -66,6 +66,24 @@ const wallets = {
     },
     troubleshootConnectionLink: 'https://support.ledger.com/hc/en-us/articles/115005195945'
   },
+  'xero_node': {
+    icon: node,
+    name: 'Node',
+    connection: {
+      title: 'On your node',
+      description: 'Make sure your Xerom node is running and available.'
+    },
+    troubleshootConnectionLink: 'https://ethereum.gitbooks.io/frontier-guide/content/getting_a_client.html'
+  },
+  'xero_ledger': {
+    icon: ledger,
+    name: 'Ledger',
+    connection: {
+      title: 'On your ledger',
+      description: 'Navigate to your Xerom account. Follow Ledger instructions to connect Ether1 wallet'
+    },
+    troubleshootConnectionLink: 'https://support.ledger.com/hc/en-us/articles/115005195945'
+  },
   'ath_node': {
     icon: node,
     name: 'Node',
@@ -91,7 +109,8 @@ const walletsByAsset = {
   etho: ['metamask', 'etho1_ledger', 'etho1_node'],
   eth: ['metamask', 'ethereum_ledger', 'ethereum_node'],
   btc: ['bitcoin_ledger', 'bitcoin_node', 'metamask'],
-  erc20: ['metamask', 'ethereum_ledger', 'ethereum_node']
+  erc20: ['metamask', 'ethereum_ledger', 'ethereum_node'],
+  xero: ['metamask', 'xero_ledger', 'xero_node']
 }
 
 function getAssetWallets (asset) {

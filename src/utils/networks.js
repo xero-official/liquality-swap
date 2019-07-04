@@ -7,14 +7,17 @@ const networksMap = {
   eth: EthereumNetworks,
   erc20: EthereumNetworks,
   etho: EthereumNetworks,
-  ath: EthereumNetworks
+  ath: EthereumNetworks,
+  xero: EthereumNetworks,
 }
 
-function getNetworkByCurrency (asset) {
+function getNetworkByCurrency(asset) {
   const assetConfig = config.assets[asset]
   const networkId = assetConfig.network
   const networks = networksMap[asset] || networksMap[assetConfig.type]
   return networks[networkId]
 }
 
-export { getNetworkByCurrency }
+export {
+  getNetworkByCurrency
+}
